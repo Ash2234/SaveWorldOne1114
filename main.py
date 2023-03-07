@@ -1,4 +1,5 @@
 from flask import Flask
+import csv
 
 app = Flask(__name__)
 
@@ -8,6 +9,7 @@ def index():
   numbers=[1, 2, 3, 4, 5]
   with open('text.txt', 'r') as file:
     intro=file.read()
+    
   data=None
   if request.method == 'POST':
     data=request.form['data']
