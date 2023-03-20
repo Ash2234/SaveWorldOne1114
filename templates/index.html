@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Study finder</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <h1>Find someone to study with</h1>
+    <form method='post'>
+      <label for="subjects">Put down the subject you want to study here:</label><br>
+      <input list="subjects" name="subject">
+      <datalist id="subjects">
+        <option value="Math">
+        <option value="Gp">
+        <option value="Computing">
+        <option value="Physics">
+        <option value="Chemistry">
+        <option value="Biology">
+        <option value="Econs">
+        <option value="Mother Tongue">
+      </datalist><br>
+      <label for="contact">Put your number or email here:</label><br>
+      <input type="text" name="contact" id="contact"><br>
+      <input type="submit" value="Find">
+    </form>
+    {% if subject=="Computing" %}
+      <meta http-equiv="refresh" content="1; URL=https://openai.com/blog/chatgpt">
+    {% elif subject=="Mother Tongue" %}
+      <meta http-equiv="refresh" content="1; URL=https://www.youtube.com/watch?v=OLahz9azFm4">
+    {% endif %}
+  </body>
+
+
+
+
+  
+</html>
