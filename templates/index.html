@@ -8,17 +8,16 @@
     <h1>Find someone to study with</h1>
     <form method='post'>
       <label for="subjects">Put down the subject you want to study here:</label><br>
-      <input list="subjects" name="subject">
-      <datalist id="subjects">
-        <option value="Math">
-        <option value="Gp">
-        <option value="Computing">
-        <option value="Physics">
-        <option value="Chemistry">
-        <option value="Biology">
-        <option value="Econs">
-        <option value="Mother Tongue">
-      </datalist><br>
+      <select list="subjects" name="subject">
+        <option value="Math">Math</option>
+        <option value="Gp">Gp</option>
+        <option value="Computing">Computing</option>
+        <option value="Physics">Physics</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Biology">Biology</option>
+        <option value="Econs">Econs</option>
+        <option value="Mother Tongue">Mother Tongue</option>
+      </select><br>
       <label for="contact">Put your number or email here:</label><br>
       <input type="text" name="contact" id="contact"><br>
       <input type="submit" value="Find">
@@ -28,7 +27,10 @@
     {% elif subject=="Mother Tongue" %}
       <meta http-equiv="refresh" content="1; URL=https://www.youtube.com/watch?v=OLahz9azFm4">
     {% endif %}
-    {{ pp }}
+    <div class='contacts'>
+      <p class='text'>Here's the list of people for you</p>
+    {{ data }}
+    </div>
   </body>
 
 
